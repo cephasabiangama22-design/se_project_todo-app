@@ -75,7 +75,7 @@ addTodoForm.addEventListener("submit", (evt) => {
   date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
   const id = uuidv4();
-  const values = { name, date };
+  const values = { name, date, id, completed: false };
   const todo = generateTodo(values);
   todosList.append(todo);
   closeModal(addTodoPopup);
@@ -84,7 +84,6 @@ addTodoForm.addEventListener("submit", (evt) => {
 initialTodos.forEach((item) => {
   const todo = generateTodo(item);
   todosList.append(todo);
-  console.log(item);
 });
 const formValidator = new FormValidator(validationConfig, addTodoForm);
 formValidator.enableValidation();

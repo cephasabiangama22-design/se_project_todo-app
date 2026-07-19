@@ -20,7 +20,7 @@ class Todo {
     this._todoCheckboxEl.id = `todo-${this._data.id}`;
     this._todoLabel.setAttribute("for", `todo-${this._data.id}`);
   }
-  _generatetododate() {
+  _generateTodoDate() {
     const dueDate = new Date(this._data.date);
     this._todoDate = this._todoElement.querySelector(".todo__date");
     if (!isNaN(dueDate)) {
@@ -43,7 +43,7 @@ class Todo {
     todoNameEl.textContent = this._data.name;
 
     this._generateCheckboxEl();
-    this._generatetododate();
+    this._generateTodoDate();
     this._setEventlistners();
 
     return this._todoElement;
