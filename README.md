@@ -33,4 +33,4 @@ GitHub Pages for deployment
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+[- ADD LINK HERE](https://github.com/cephasabiangama22-design/se_project_todo-app.git)
