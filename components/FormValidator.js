@@ -8,9 +8,9 @@ class FormValidator {
     this._inactiveButtonClass = settings.inactiveButtonClass;
     this._formEl = formEl;
   }
-  _hideInputError() {
-    this._errorElementId = `#${inputElement.id}-error`;
-    this._errorElement = this._formEl.querySelector(errorElementId);
+  _hideInputError(inputElement) {
+    const errorElementId = `#${inputElement.id}-error`;
+    const errorElement = this._formEl.querySelector(errorElementId);
     inputElement.classList.remove(this._inputErrorClass);
     errorElement.classList.remove(this._errorClass);
     errorElement.textContent = "";
